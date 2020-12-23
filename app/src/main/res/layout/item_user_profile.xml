@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_default">
+
+    <ImageView
+        android:id="@+id/profileAvatar"
+        android:layout_width="@dimen/avatar_large_size"
+        android:layout_height="@dimen/avatar_large_size"
+        android:background="@drawable/round_image"
+        android:contentDescription="@string/desc_avatar_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/profileName"
+        style="@style/TitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/profileAbout"
+        style="@style/SubtitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:ellipsize="end"
+        android:maxLines="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/profileName"
+        tools:text="@tools:sample/lorem[5]" />
+
+    <TextView
+        android:id="@+id/profileLastSeen"
+        style="@style/SubtitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/profileAbout"
+        tools:text="@tools:sample/date/hhmm" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/profileBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="profileAvatar,profileLastSeen" />
+
+    <TextView
+        android:id="@+id/profileBirthday"
+        style="@style/ProfileInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:drawableStartCompat="@drawable/ic_cake_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileBarrier"
+        tools:text="Birthday: 2000-01-31" />
+
+    <TextView
+        android:id="@+id/profileLocation"
+        style="@style/ProfileInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        app:drawableStartCompat="@drawable/ic_home_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileBirthday"
+        tools:text="City: Stockholm, Sweden" />
+
+    <TextView
+        android:id="@+id/profileEducation"
+        style="@style/ProfileInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        app:drawableStartCompat="@drawable/ic_school_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileLocation"
+        tools:text="Education: Malmö University" />
+
+    <TextView
+        android:id="@+id/profileJob"
+        style="@style/ProfileInfoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        app:drawableStartCompat="@drawable/ic_work_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileEducation"
+        tools:text="Job: Spotify" />
+
+    <TextView
+        android:id="@+id/profileFriends"
+        style="@style/ProfileCounterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintEnd_toStartOf="@+id/profileGuideline33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileJob"
+        tools:text="666" />
+
+    <TextView
+        android:id="@+id/profileFollowers"
+        style="@style/ProfileCounterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintEnd_toStartOf="@+id/profileGuideline66"
+        app:layout_constraintStart_toEndOf="@+id/profileGuideline33"
+        app:layout_constraintTop_toBottomOf="@+id/profileJob"
+        tools:text="42" />
+
+    <TextView
+        android:id="@+id/profilePages"
+        style="@style/ProfileCounterTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/profileGuideline66"
+        app:layout_constraintTop_toBottomOf="@+id/profileJob"
+        tools:text="999" />
+
+    <TextView
+        android:id="@+id/profileFriendsLabel"
+        style="@style/ProfileCountersLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/label_profile_friends"
+        app:layout_constraintEnd_toStartOf="@+id/profileGuideline33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileFriends" />
+
+    <TextView
+        android:id="@+id/profileFollowersLabel"
+        style="@style/ProfileCountersLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/label_profile_followers"
+        app:layout_constraintEnd_toStartOf="@+id/profileGuideline66"
+        app:layout_constraintStart_toEndOf="@+id/profileGuideline33"
+        app:layout_constraintTop_toBottomOf="@+id/profileFriends" />
+
+    <TextView
+        android:id="@+id/profilePagesLabel"
+        style="@style/ProfileCountersLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:text="@string/label_profile_pages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profileGuideline66"
+        app:layout_constraintTop_toBottomOf="@+id/profileFriends" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profileGuideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/profileGuideline66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

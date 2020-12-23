@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tools
+
+    defaultConfig {
+        applicationId "dev.akat.veka"
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas".toString())
+                arg("room.incremental", "true")
+                arg("room.expandProjection", "true")
+            }
+        }
+
+        buildConfigField("String", "API_URL", "\"https://api.vk.com/\"")
+        buildConfigField("String", "API_VERSION", "\"5.124\"")
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        freeCompilerArgs += "-Xopt-in=kotlin.RequiresOptIn"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
+
+    // AndroidX
+    implementation "androidx.core:core-ktx:$versions.core_ktx"
+    implementation "androidx.appcompat:appcompat:$versions.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraint_layout"
+    implementation "androidx.recyclerview:recyclerview:$versions.recycler_view"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swipe"
+    implementation "androidx.viewpager2:viewpager2:$versions.viewpager"
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+    implementation "androidx.preference:preference-ktx:$versions.preference"
+
+    // Room
+    implementation "androidx.room:room-runtime:$versions.room"
+    implementation "androidx.room:room-rxjava2:$versions.room"
+    kapt "androidx.room:room-compiler:$versions.room"
+
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:$versions.paging"
+    implementation "androidx.paging:paging-rxjava2-ktx:$versions.paging"
+
+    // Material
+    implementation "com.google.android.material:material:$versions.material"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$versions.glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$versions.glide"
+
+    // Rx
+    implementation "io.reactivex.rxjava2:rxjava:$versions.rxjava"
+    implementation "io.reactivex.rxjava2:rxandroid:$versions.rxandroid"
+    implementation "io.reactivex.rxjava2:rxkotlin:$versions.rxkotlin"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
+
+    // Dagger
+    implementation "com.google.dagger:dagger:$versions.dagger"
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+
+    // VK SDK
+    implementation "com.vk:androidsdk:$versions.vk_sdk"
+
+    // Shimmer
+    implementation "com.facebook.shimmer:shimmer:$versions.shimmer"
+
+    // LeakCanary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$versions.leakcanary"
+
+    // Test
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation "org.mockito:mockito-core:$versions.mockito"
+    testImplementation "org.mockito:mockito-inline:$versions.mockito"
+}

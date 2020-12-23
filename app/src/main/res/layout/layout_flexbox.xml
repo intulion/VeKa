@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev.akat.veka.widget.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_default">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:text="Simple"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:padding="8dp"
+        android:text="Padding"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Margin"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_large"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Big margin"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:padding="8dp"
+        android:text="Match parent with padding"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        android:background="@android:color/holo_red_dark"
+        android:padding="@dimen/padding_small"
+        android:text="Padding and margin"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/spacing_medium"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="@dimen/padding_small"
+        android:text="Wider than screen"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText" />
+
+</dev.akat.veka.widget.flexbox.FlexboxLayout>

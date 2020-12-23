@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/attachmentAddButton"
+    style="@style/LargeImageButton"
+    android:layout_width="@dimen/image_button_large_size"
+    android:layout_height="@dimen/image_button_large_size"
+    android:layout_marginTop="@dimen/spacing_small"
+    android:layout_marginEnd="@dimen/spacing_small"
+    android:adjustViewBounds="true"
+    android:background="@drawable/round_rect_image"
+    android:contentDescription="@string/desc_attachment_button"
+    android:tint="@color/secondaryColor"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:srcCompat="@drawable/ic_attach_layer" />

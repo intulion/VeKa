@@ -1,0 +1,72 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+    </style>
+
+    <style name="TitleTextView">
+        <item name="android:textColor">@color/grey_80</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+    </style>
+
+    <style name="SubtitleTextView">
+        <item name="android:textColor">@color/grey_40</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Caption</item>
+    </style>
+
+    <style name="ContentTextView">
+        <item name="android:textColor">@color/grey_80</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+    </style>
+
+    <style name="TitleTextView.Comment">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+    </style>
+
+    <style name="ContentTextView.Comment">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+    </style>
+
+    <style name="ProfileInfoTextView">
+        <item name="android:textColor">@color/grey_60</item>
+        <item name="android:textSize">@dimen/profile_info_font_size</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:drawablePadding">@dimen/padding_small</item>
+    </style>
+
+    <style name="ProfileCounterTextView">
+        <item name="android:textColor">@color/grey_80</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProfileCountersLabelTextView">
+        <item name="android:textColor">@color/grey_60</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="PostButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="LargeImageButton">
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <style name="MediumImageButton">
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:background">@null</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+</resources>

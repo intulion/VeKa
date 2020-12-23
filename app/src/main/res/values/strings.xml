@@ -1,0 +1,52 @@
+<resources>
+    <integer name="com_vk_sdk_AppId">7693835</integer>
+
+    <string name="app_name">VeKa</string>
+    <string name="desc_avatar_image">Avatar image</string>
+    <string name="desc_post_photo">Post photo</string>
+    <string name="desc_error_image">Error image</string>
+    <string name="desc_login_image">Login image</string>
+    <string name="desc_share_button">Share button</string>
+    <string name="desc_save_button">Save button</string>
+    <string name="desc_send_button">Send button</string>
+    <string name="desc_close_button">Close button</string>
+    <string name="desc_remove_button">Remove button</string>
+    <string name="desc_edit_button">Edit button</string>
+    <string name="desc_attachment_button">Attachment button</string>
+    <string name="desc_attachment_image">Attachment image</string>
+
+    <string name="label_news">News</string>
+    <string name="label_favorite">Favorite</string>
+    <string name="label_profile">Profile</string>
+
+    <string name="label_error">Error</string>
+    <string name="label_ok">OK</string>
+    <string name="label_login_text">Please login to your account</string>
+    <string name="label_login">Login</string>
+    <string name="label_login_failed">Login failed. Try again</string>
+    <string name="label_storage_permission_error">App need to access storage permission</string>
+    <string name="label_retry">Retry</string>
+    <string name="label_share_intent">Share</string>
+    <string name="label_photo_saved">Successfully saved</string>
+
+    <string name="label_profile_birthday">Birthday: %1$s</string>
+    <string name="label_profile_job">Job: %1$s</string>
+    <string name="label_profile_education">Education: %1$s</string>
+    <string name="label_profile_location">Location: %1$s</string>
+    <string name="label_profile_last_seen">online: %1$td.%1$tm.%1$tY %1$tH:%1$tM</string>
+    <string name="label_profile_about">About</string>
+    <string name="label_profile_friends">Friends</string>
+    <string name="label_profile_followers">Followers</string>
+    <string name="label_profile_pages">Pages</string>
+    <string name="label_publish">Publish</string>
+
+    <string name="hint_comment">Write a comment…</string>
+    <string name="hint_post_message">What\'s new?</string>
+
+    <string name="message_request_error">An error occurred during the request\nTry again later</string>
+    <string name="message_successfully_send">Successfully send</string>
+    <string name="message_max_attachments">Maximum files attached</string>
+    <string name="message_post_published">Post successfully published</string>
+    <string name="message_post_error">You must fill in message and/or add attachments</string>
+    <string name="message_no_network">Check your internet connection</string>
+</resources>
