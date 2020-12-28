@@ -25,8 +25,8 @@
 ## Стек технологий
 Kotlin, MVVM, Dagger 2, RxJava 2, Room, Paging 3, Retrofit, Glide, custom ViewGroup.
 
-## Author
+## Автор
 Anton Karpenko
 
-## License
+## Лицензия
 This project is licensed under the Apache License 2.0 - See: http://www.apache.org/licenses/LICENSE-2.0.txt
