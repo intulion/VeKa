@@ -8,6 +8,8 @@
 * возможность самому оставить комментарий под постом
 * возможность написать свой пост (и прикрепить к нему картинки)
 
+Данные получаются через [REST API](https://vk.com/dev/methods), VK SDK используется только для авторизации.
+
 ## Итоговый проект [Tinkoff Fintech](https://fintech.tinkoff.ru/)
 <p align="center">
 <img src="https://github.com/intulion/VeKa/blob/master/screenshots/profile.png" vspace="5" width=275>
